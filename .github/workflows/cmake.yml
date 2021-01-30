@@ -17,6 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Install Python technology
+      run: apt-get install -y python3-setuptools
+    
     - name: Install Conan
       run: pip3 install -U wheel --user && pip3 install conan --user
 
