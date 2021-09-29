@@ -1,20 +1,24 @@
 #pragma once
 
+#include <string_view>
+
 #include <range/v3/view.hpp>
 #include <range/v3/action.hpp>
 
 namespace day2 {
 namespace detail {
-[[nodiscard]] auto extractDimensions(std::string entry) -> std::vector<int> {
-        return ranges::views::split(entry, 'x') | ranges::views::transform([](const auto& item){
-            return std::stoi(std::string(&*item.begin(), ranges::distance(item)));
-        }) | ranges::to<std::vector<int>>() | ranges::actions::sort;
+[[nodiscard]] auto extractDimensions(std::string_view entry) -> std::vector<int> {
+    return ranges::views::split(entry, 'x')
+         | ranges::views::transform([](const auto& item) {
+             return std::atoi(&*item.begin());
+           })
+         | ranges::to<std::vector<int>>() | ranges::actions::sort;
     }
 }
 
-[[nodiscard]] auto calculatePackagePaper(std::string input) {
+[[nodiscard]] auto calculatePackagePaper(std::string_view input) {
     auto result = 0;
-    std::istringstream input_stream(input);
+    std::istringstream input_stream(input.data());
     std::string entry;
     while (std::getline(input_stream, entry)) {
         auto dimensions = detail::extractDimensions(entry);
@@ -27,9 +31,9 @@ namespace detail {
     return result;
 }
 
-[[nodiscard]] auto calculateRibbon(std::string input) {
+[[nodiscard]] auto calculateRibbon(std::string_view input) {
     auto result = 0;
-    std::istringstream input_stream(input);
+    std::istringstream input_stream(input.data());
     std::string entry;
     while (std::getline(input_stream, entry)) {
         auto dimensions = detail::extractDimensions(entry);
