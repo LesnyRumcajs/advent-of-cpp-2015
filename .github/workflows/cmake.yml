@@ -25,7 +25,7 @@ jobs:
     - name: Run Conan install
       shell: bash
       working-directory: ${{github.workspace}}/build
-      run: conan install $GITHUB_WORKSPACE
+      run: conan install $GITHUB_WORKSPACE -pr=$GITHUB_WORKSPACE/conan_profile
 
     - name: Configure CMake
       shell: bash
