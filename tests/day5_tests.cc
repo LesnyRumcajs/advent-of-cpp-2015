@@ -1,7 +1,9 @@
 #define CATCH_CONFIG_MAIN
+
 #include <catch2/catch.hpp>
 
 #include "../src/day5.h"
+
 TEST_CASE("Day5::part1", "[isNice]") {
     REQUIRE(day5::isNice("ugknbfddgicrmopn"));
     REQUIRE(day5::isNice("aaa"));

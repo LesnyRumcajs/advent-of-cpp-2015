@@ -10,7 +10,7 @@ namespace day3 {
     using Point = std::pair<int, int>;
 
     namespace detail {
-        auto applyInstruction(auto instruction, Point& pos) {
+        auto applyInstruction(auto instruction, Point &pos) {
             switch (instruction) {
                 case '>':
                     pos.first += 1;
@@ -19,7 +19,7 @@ namespace day3 {
                     pos.first -= 1;
                     break;
                 case 'v':
-                    pos.second+= 1;
+                    pos.second += 1;
                     break;
                 case '^':
                     pos.second -= 1;
@@ -29,13 +29,14 @@ namespace day3 {
             }
         }
     }
+
     auto countVisitedHouses(std::string_view input) {
         auto visited = std::set<Point>();
 
-        auto pos = Point(0,0);
+        auto pos = Point(0, 0);
         visited.insert(pos);
 
-        for (auto ch : input) {
+        for (auto ch: input) {
             detail::applyInstruction(ch, pos);
             visited.insert(pos);
         }
@@ -45,8 +46,8 @@ namespace day3 {
 
     auto countVisitedHousesWithRoboSanta(std::string_view input) {
         auto visited = std::set<Point>();
-        auto santa_pos = Point(0,0);
-        auto robot_pos = Point(0,0);
+        auto santa_pos = Point(0, 0);
+        auto robot_pos = Point(0, 0);
         visited.insert(santa_pos);
 
         ranges::for_each(input | ranges::views::chunk(2), [&](const auto instructions) {

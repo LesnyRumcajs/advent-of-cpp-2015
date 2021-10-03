@@ -8,6 +8,6 @@ int main(void) {
     std::stringstream buffer;
     buffer << input_file.rdbuf();
 
-    std::cout << "Day 2, part 1: " <<  day2::calculatePackagePaper(buffer.str()) << '\n';
-    std::cout << "Day 2, part 2: " <<  day2::calculateRibbon(buffer.str()) << '\n';
+    std::cout << "Day 2, part 1: " << day2::calculatePackagePaper(buffer.str()) << '\n';
+    std::cout << "Day 2, part 2: " << day2::calculateRibbon(buffer.str()) << '\n';
 }
