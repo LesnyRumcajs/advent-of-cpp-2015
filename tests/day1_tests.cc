@@ -1,4 +1,5 @@
 #define CATCH_CONFIG_MAIN
+
 #include <catch2/catch.hpp>
 
 #include "../src/day1.h"
