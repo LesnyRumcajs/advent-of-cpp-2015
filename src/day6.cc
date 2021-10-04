@@ -9,6 +9,6 @@ int main(void) {
     std::stringstream buffer;
     buffer << input_file.rdbuf();
 
-//    std::cout << "Day 6, part 1: " << day6::countNice(buffer.str()) << '\n';
-//    std::cout << "Day 6, part 2: " << day6::countBetterNice(buffer.str()) << '\n';
+    std::cout << "Day 6, part 1: " << day6::countLitLights(buffer.str()) << '\n';
+    std::cout << "Day 6, part 2: " << day6::countLitLightsModern(buffer.str()) << '\n';
 }
