@@ -4,7 +4,6 @@
 #include <range/v3/view/remove_if.hpp>
 
 #include <set>
-#include <iostream>
 
 namespace day5 {
     namespace detail {
@@ -73,10 +72,6 @@ namespace day5 {
                     pairOfPairs = true;
                 }
             }
-        }
-
-        if (inBetween && pairOfPairs) {
-            std::cout << word << '\n';
         }
 
         return inBetween && pairOfPairs;
