@@ -49,7 +49,7 @@ File.open("tests/day#{day_nr}_tests.cc", 'w') do |f|
     REQUIRE(1 == 1);
   }
 
-  TEST_CASE("Day#{day_nr}::part1", "[]") {
+  TEST_CASE("Day#{day_nr}::part2", "[]") {
     REQUIRE(2 == 2);
   }
   HEREDOC
