@@ -51,3 +51,14 @@ conan_target_link_libraries(day6_tests)
 add_test(
         NAME day6_tests
         COMMAND day6_tests)
+
+add_executable(
+        day7_tests
+        day7_tests.cc
+        ../src/day7.cc
+)
+conan_target_link_libraries(day7_tests)
+add_test(
+        NAME day7_tests
+        COMMAND day7_tests)
+
