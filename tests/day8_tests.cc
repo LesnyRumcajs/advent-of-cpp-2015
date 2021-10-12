@@ -10,9 +10,6 @@ TEST_CASE("Day8::part1", "[]") {
                  "\"\\x27\"\n";
     REQUIRE(12 == day8::countCharacters(input));
 
-    input = R"("lr\x20efh")";
-    REQUIRE(6 == day8::countCharacters(input));
-
     input = R"("nnx\\krnrfomdnt\x2flbl\xd2xpo\"cp\"k")";
     REQUIRE(11 == day8::countCharacters(input));
 }
