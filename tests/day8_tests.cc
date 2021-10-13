@@ -15,5 +15,9 @@ TEST_CASE("Day8::part1", "[]") {
 }
 
 TEST_CASE("Day8::part2", "[]") {
-    REQUIRE(2 == 2);
+    auto input = "\"\"\n"
+                 "\"abc\"\n"
+                 "\"aaa\\\"aaa\"\n"
+                 "\"\\x27\"\n";
+    REQUIRE(19 == day8::countCharactersWithEncoding(input));
 }
