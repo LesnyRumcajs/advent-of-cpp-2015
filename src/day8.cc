@@ -10,5 +10,5 @@ int main() {
     buffer << input_file.rdbuf();
 
     std::cout << "Day 8, part 1: " << day8::countCharacters(buffer.str()) << '\n';
-    std::cout << "Day 8, part 2: " << '\n';
+    std::cout << "Day 8, part 2: " << day8::countCharactersWithEncoding(buffer.str()) << '\n';
 }
