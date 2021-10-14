@@ -1,6 +1,7 @@
 # Advent of Code 2015 (in C++20)
 
 ![CMake](https://github.com/LesnyRumcajs/advent-of-cpp-2015/workflows/CMake/badge.svg)
+![Flawfinder](https://github.com/LesnyRumcajs/advent-of-cpp-2015/workflows/flawfinder/badge.svg)
 
 *Roses are red, violets are blue*
 
