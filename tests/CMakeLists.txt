@@ -72,3 +72,13 @@ add_test(
         NAME day8_tests
         COMMAND day8_tests)
 
+
+add_executable(
+        day9_tests
+        day9_tests.cc
+)
+conan_target_link_libraries(day9_tests)
+add_test(
+        NAME day9_tests
+        COMMAND day9_tests)
+
