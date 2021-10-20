@@ -51,3 +51,9 @@ add_executable(
         day9.cc
         day9.h)
 conan_target_link_libraries(day9)
+
+add_executable(
+        day10
+        day10.cc
+        day10.h)
+conan_target_link_libraries(day10)
