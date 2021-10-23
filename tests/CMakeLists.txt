@@ -102,3 +102,13 @@ add_test(
         NAME day11_tests
         COMMAND day11_tests)
 
+
+add_executable(
+        day12_tests
+        day12_tests.cc
+)
+conan_target_link_libraries(day12_tests)
+add_test(
+        NAME day12_tests
+        COMMAND day12_tests)
+
